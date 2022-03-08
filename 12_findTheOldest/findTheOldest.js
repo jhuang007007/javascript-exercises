@@ -5,7 +5,6 @@ const findTheOldest = function(people) {
       age: (person.yearOfDeath === undefined) ? (2022 - person.yearOfBirth) : (person.yearOfDeath - person.yearOfBirth),
     }
   ));
-  console.table(ageIncluded);
   return ageIncluded.reduce((prev, current) => (prev.age > current.age) ? prev : current);
 }
 
